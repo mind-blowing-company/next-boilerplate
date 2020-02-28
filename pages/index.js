@@ -1,12 +1,31 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Head from "next/head";
 import Link from "next/link";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
+import {startClock} from "../redux/clock/actions";
 import "./styles.css";
 import {withTranslation} from "../i18n";
 
 const IndexPage = (props) => {
     const {t} = props;
+
+    useEffect(() => {
+        const timer = props.startClock();
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, [props]);
+
+    const formatTime = t => {
+        return `${padNumber(t.getHours())}:${padNumber(t.getMinutes())}:${padNumber(t.getSeconds())}`;
+    };
+
+    const padNumber = num => {
+        return String(num).padStart(2, 0);
+    };
 
     return (
         <div className="app">
@@ -19,25 +38,36 @@ const IndexPage = (props) => {
                         {t("switch-locale")}
                     </button>
                 </Link>
-                <img src="/logo.svg" className="app-logo" alt="logo" />
+                <img alt="logo" className="app-logo" src={"/logo.svg"} />
                 <p>
                     {t("edit")} <code>pages/index.js</code> {t("save-reload")}.
                 </p>
+                <p>{formatTime(new Date(props.clock.lastUpdate))}</p>
                 <a
                     className="app-link"
                     href="https://nextjs.org"
-                    target="_blank"
                     rel="noopener noreferrer"
+                    target="_blank"
                 >
                     {t("learn")}
                 </a>
             </div>
         </div>
-    )
+    );
 };
 
 IndexPage.getInitialProps = async () => ({
     namespacesRequired: ["common"]
 });
 
-export default withTranslation("common")(IndexPage);
+const mapStateToProps = state => ({
+    clock: state.clock
+});
+
+const mapDispatchToProps = dispatch => {
+    return {
+        startClock: bindActionCreators(startClock, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation("common")(IndexPage));

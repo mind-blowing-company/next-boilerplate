@@ -8,8 +8,7 @@ const port = process.env.PORT || 3000;
 const app = next({ dev: process.env.NODE_ENV !== "production" });
 const requestHandler = app.getRequestHandler();
 
-(async () => {
-    await app.prepare();
+app.prepare().then(async () => {
     const server = express();
 
     await i18n.initPromise;
@@ -17,6 +16,6 @@ const requestHandler = app.getRequestHandler();
 
     server.get("*", (req, res) => requestHandler(req, res));
 
-    await server.listen(port);
+    server.listen(port);
     console.log(`> Ready on http://localhost:${port}`);
-})();
+});
