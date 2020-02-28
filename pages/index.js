@@ -57,6 +57,9 @@ const IndexPage = (props) => {
 };
 
 IndexPage.getInitialProps = async () => ({
+    // The `namespacesRequired` prop tells next-i18next
+    // which namespaces to load for this particular page.
+    // Read more: https://github.com/isaachinman/next-i18next#4-declaring-namespace-dependencies
     namespacesRequired: ["common"]
 });
 
