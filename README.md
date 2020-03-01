@@ -4,7 +4,7 @@ Actually this project does nothing itself. As follows from title,
 it's a boilerplate which is to be used for various purposes. This is
 a basic Next JS app with Redux i18n and custom URL routes.
 
-## How to install and start this app:
+## How to install and start this app (locally):
 
 You will need [Node.js](https://nodejs.org/) in order to run this app.
 
@@ -26,10 +26,22 @@ npm install
 ### Available scirpts:
 You can run scripts by running `yarn {SCRIPT NAME}` or
 `npm run {SCRIPT NAME}`
-* `dev` to launch the development server.
-* `build` to create an optimized production build.
-* `start` to launch the previously built app (i.e. the production React app).
-* `lint`/`lint:fix` to run the ESLint's check/fix problems.
+* `dev` - Launch the development server.
+* `build` - Create an optimized production build.
+* `start` - Launch the previously built app (i.e. the production React app).
+* `lint`/`lint:fix` - Run the ESLint's check/fix problems.
+* `dev:docker` - Development server in Docker container.
+
+## How to run this app in Docker:
+
+If you don't have Node or for some other reasons you can't run this
+app on your computer, you can use Docker to launch a dev
+server of this app. Just run:
+```shell script
+yarn dev:docker
+```
+Docker has volume connected to container so when you'll make changes
+to the code, the app will still hot-reload. Profit!
 
 ## What's used here:
 
