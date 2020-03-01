@@ -2,10 +2,10 @@ const express = require("express");
 const next = require("next");
 const nextI18NextMiddleware = require("next-i18next/middleware").default;
 
-const i18n = require("./i18n");
+const i18n = require("./src/i18n");
 
 const port = process.env.PORT || 3000;
-const app = next({ dev: process.env.NODE_ENV !== "production" });
+const app = next({ dev: process.env.NODE_ENV !== "production", dir: "./src" });
 const requestHandler = app.getRequestHandler();
 
 app.prepare().then(async () => {

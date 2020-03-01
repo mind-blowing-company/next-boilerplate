@@ -23,7 +23,8 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint --ext=.js,.jsx ./",
-    "lint:fix": "eslint --ext=.js,.jsx ./ --fix"
+    "lint:fix": "eslint --ext=.js,.jsx ./ --fix",
+    "dev:docker": "./scripts/build_docker.sh && ./scripts/run_docker.sh"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
