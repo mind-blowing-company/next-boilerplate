@@ -36,6 +36,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
+    "ecmaVersion": 7,
     "sourceType": "module"
   },
   "plugins": [
