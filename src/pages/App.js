@@ -8,7 +8,11 @@ import {startClock} from "../redux/clock/actions";
 import "./styles.css";
 import {withTranslation} from "../i18n";
 
-const IndexPage = (props) => {
+// This component actually can be called whatever the developer
+// would like to call it. However, to show how the routes are working
+// it's called `App`.
+// See `src/routes.js`.
+const App = (props) => {
     const {t} = props;
 
     useEffect(() => {
@@ -24,7 +28,7 @@ const IndexPage = (props) => {
     };
 
     const padNumber = num => {
-        return String(num).padStart(2, 0);
+        return String(num).padStart(2, "0");
     };
 
     return (
@@ -56,7 +60,7 @@ const IndexPage = (props) => {
     );
 };
 
-IndexPage.getInitialProps = async () => ({
+App.getInitialProps = async () => ({
     // The `namespacesRequired` prop tells next-i18next
     // which namespaces to load for this particular page.
     // Read more: https://github.com/isaachinman/next-i18next#4-declaring-namespace-dependencies
@@ -73,4 +77,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation("common")(IndexPage));
+export default connect(mapStateToProps, mapDispatchToProps)(withTranslation("common")(App));

@@ -7,6 +7,7 @@ COPY yarn.lock ./
 RUN yarn
 
 COPY server.js ./
+COPY next.config.js ./
 
 EXPOSE 3000
 

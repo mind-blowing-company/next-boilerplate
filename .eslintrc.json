@@ -85,6 +85,7 @@
         "newlines-between": "always"
       }
     ],
-    "no-trailing-spaces": "error"
+    "no-trailing-spaces": "error",
+    "global-require": "error"
   }
 }
