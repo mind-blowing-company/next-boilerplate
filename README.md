@@ -30,18 +30,31 @@ You can run scripts by running `yarn {SCRIPT NAME}` or
 * `build` - Create an optimized production build.
 * `start` - Launch the previously built app (i.e. the production React app).
 * `lint`/`lint:fix` - Run the ESLint's check/fix problems.
-* `dev:docker` - Development server in Docker container.
 
 ## How to run this app in Docker:
 
 If you don't have Node or for some other reasons you can't run this
 app on your computer, you can use Docker to launch a dev
 server of this app. Just run:
+
 ```shell script
-yarn dev:docker
+./scripts/build_docker.sh
 ```
+
+It'll build you a fresh Docker image of this app with
+all the dependencies required for it's work. And then
+to launch Docker:
+
+```shell script
+./scripts/run_docker.sh
+```
+
 Docker has volume connected to container so when you'll make changes
 to the code, the app will still hot-reload. Profit!
+
+**Note**: Please run these scripts from project's root (i.e.
+if you `cd` into the scripts folder and run these commands,
+they probably are not going to work).
 
 ## What's used here:
 
