@@ -4,3 +4,5 @@ node_modules/
 .gitignore
 \.idea/
 .eslintrc.json
+.dockerignore
+Dockerfile
