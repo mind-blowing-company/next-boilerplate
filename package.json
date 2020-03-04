@@ -19,21 +19,30 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0"
   },
-  "scripts": {
-    "dev": "nodemon server.js",
-    "build": "next build src/",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "eslint --ext=.js,.jsx ./",
-    "lint:fix": "eslint --ext=.js,.jsx ./ --fix"
-  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.0"
+  },
+  "scripts": {
+    "dev": "nodemon server.js",
+    "build": "next build src/",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "eslint --ext=.js,.jsx ./",
+    "lint:fix": "eslint --ext=.js,.jsx ./ --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   }
 }

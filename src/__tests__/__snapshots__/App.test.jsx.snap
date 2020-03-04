@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders successfully 1`] = `
+<div
+  className="app"
+>
+  <div
+    className="app-container"
+  >
+    <button
+      className="switch-locale"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      switch-locale
+    </button>
+    <img
+      alt="logo"
+      className="app-logo"
+      src="/logo.svg"
+    />
+    <p>
+      edit
+       
+      <code>
+        pages/index.js
+      </code>
+       
+      save-reload
+      .
+    </p>
+    <p>
+      06:00:00
+    </p>
+    <a
+      className="app-link"
+      href="https://nextjs.org"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      learn
+    </a>
+  </div>
+</div>
+`;

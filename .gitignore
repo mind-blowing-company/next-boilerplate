@@ -6,3 +6,9 @@ node_modules/
 
 # Framework's files
 \.next/
+
+# Tests
+**/coverage/**/*
+
+# Logs
+**/**/*.log
