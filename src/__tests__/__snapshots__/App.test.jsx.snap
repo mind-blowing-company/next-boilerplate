@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders successfully 1`] = `
+exports[`works with snapshot 1`] = `
 <div
   className="app"
 >
