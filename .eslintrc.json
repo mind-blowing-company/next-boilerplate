@@ -9,7 +9,8 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:import/warnings",
-    "plugin:import/errors"
+    "plugin:import/errors",
+    "plugin:sonarjs/recommended"
   ],
   "globals": {
     "Atomics": "readonly"
@@ -42,7 +43,8 @@
   },
   "plugins": [
     "react",
-    "import"
+    "import",
+    "sonarjs"
   ],
   "rules": {
     "semi": [
