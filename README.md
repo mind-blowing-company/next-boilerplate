@@ -65,3 +65,6 @@ to know the project:
 * [Redux](https://redux.js.org/)
 * [next-i18next library](https://github.com/isaachinman/next-i18next)
 * [ESLint](https://eslint.org/)
+* [Jest](https://jestjs.io/)
+* [Enzyme](https://github.com/enzymejs/enzyme)
+* [Sonar JS](https://github.com/SonarSource/eslint-plugin-sonarjs)
