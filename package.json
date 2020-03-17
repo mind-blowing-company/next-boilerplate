@@ -37,7 +37,7 @@
     "react-test-renderer": "^16.13.0"
   },
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon server.js --config config/nodemon.json",
     "build": "next build src/",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint --ext=.js,.jsx ./",
