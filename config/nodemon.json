@@ -1,6 +1,11 @@
 {
   "verbose": false,
   "ignore": ["node_modules", "src/.next"],
-  "watch": ["server.js", "next.config.js"],
+  "watch": [
+    "server.js",
+    "next.config.js",
+    ".env",
+    "config/nodemon.json"
+  ],
   "ext": "js json"
 }

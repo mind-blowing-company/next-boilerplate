@@ -15,3 +15,6 @@ node_modules/
 
 # Sonar files
 \.scannerwork/
+
+# env files
+.env

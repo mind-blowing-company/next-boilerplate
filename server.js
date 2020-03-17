@@ -1,3 +1,6 @@
+require("dotenv").config({
+    path: ".env"
+});
 const express = require("express");
 const next = require("next");
 const nextI18NextMiddleware = require("next-i18next/middleware").default;
@@ -11,7 +14,6 @@ const app = next({
     dev,
     dir: "./src",
 });
-
 const requestHandler = app.getRequestHandler();
 
 app.prepare().then(async () => {
